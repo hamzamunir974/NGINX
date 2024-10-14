@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Install Nginx Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        code {
+            background-color: #eee;
+            padding: 4px;
+            border-radius: 3px;
+        }
+        .steps {
+            margin-top: 20px;
+        }
+        .steps ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .steps li {
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>How to Install Nginx Server</h1>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <h2>What is Nginx?</h2>
+            <p>Nginx is an open-source web server that can also be used as a reverse proxy, load balancer, and HTTP cache. It's known for its high performance and stability, and it's widely used to serve static content on websites.</p>
+            
+            <h2>Prerequisites</h2>
+            <ul>
+                <li>A server running Linux (Ubuntu, CentOS, etc.)</li>
+                <li>Access to the command line</li>
+                <li>Root or user with sudo privileges</li>
+            </ul>
+
+            <h2>Steps to Install Nginx</h2>
+            <div class="steps">
+                <ul>
+                    <li>
+                        <h3>Step 1: Update Your Package List</h3>
+                        <p>Before installing Nginx, ensure your package list is up to date. Run the following command:</p>
+                        <code>sudo apt update</code>
+                    </li>
+                    <li>
+                        <h3>Step 2: Install Nginx</h3>
+                        <p>Install Nginx using the package manager by running:</p>
+                        <code>sudo apt install nginx</code>
+                    </li>
+                    <li>
+                        <h3>Step 3: Start and Enable Nginx</h3>
+                        <p>Once installed, start the Nginx service:</p>
+                        <code>sudo systemctl start nginx</code>
+                        <p>Enable it to start automatically on boot:</p>
+                        <code>sudo systemctl enable nginx</code>
+                    </li>
+                    <li>
+                        <h3>Step 4: Adjust Firewall Settings</h3>
+                        <p>If you have a firewall running, allow traffic on HTTP (port 80) and HTTPS (port 443):</p>
+                        <code>sudo ufw allow 'Nginx Full'</code>
+                    </li>
+                    <li>
+                        <h3>Step 5: Verify Installation</h3>
+                        <p>Open your web browser and navigate to your server’s IP address. You should see the Nginx welcome page:</p>
+                        <code>http://your_server_ip</code>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nginx Installation Guide</p>
+    </footer>
+</body>
+</html>
